@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(218, 23%, 16%);
+    font-family: Manrope, Arial;
+}
+
+.card {
+    width: 550px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+    padding: 50px;
+    border-radius: 15px;
+    position: relative;
+    background-color: hsl(217, 19%, 24%);
+}
+
+.card h1 {
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: hsl(150, 100%, 66%);
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+}
+
+.card img {
+    margin-bottom: 25px;
+}
+
+.mobile {
+    display: none;
+}
+
+
+button {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: -30px;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    background-image: url('../img/icon-dice.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    box-shadow: 0px 0px 30px hsl(150, 100%, 66%);
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90vw;
+        padding: 20px;
+    }
+
+    .card p {
+        margin-bottom: 0px;
+    }
+
+    .card img {
+        margin-bottom: 50px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
