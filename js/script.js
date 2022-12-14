@@ -10,7 +10,7 @@ async function fetchAdvice() {
     setText(json);
 }
 
-function setText({slip}) {
-    adviceId.innerText = `advice #${slip.id}`;
-    adviceText.innerText = slip.advice;
+function setText({slip: {id, advice}}) {
+    adviceId.innerText = `advice #${id}`;
+    adviceText.innerText = advice;
 }
